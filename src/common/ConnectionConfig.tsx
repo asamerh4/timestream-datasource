@@ -125,6 +125,7 @@ export default class ConnectionConfig extends PureComponent<Props, State> {
                     <div className="width-30">
                       <Input
                         className="width-30"
+                        name="accessKey"
                         value={secureJsonData.accessKey || ''}
                         onChange={onUpdateDatasourceSecureJsonDataOption(this.props, 'accessKey')}
                       />
@@ -157,6 +158,7 @@ export default class ConnectionConfig extends PureComponent<Props, State> {
                     <div className="width-30">
                       <Input
                         className="width-30"
+                        name="accessKey"
                         value={secureJsonData.secretKey || ''}
                         onChange={onUpdateDatasourceSecureJsonDataOption(this.props, 'secretKey')}
                       />
@@ -178,6 +180,7 @@ export default class ConnectionConfig extends PureComponent<Props, State> {
                 <Input
                   className="width-30"
                   placeholder="arn:aws:iam:*"
+                  name="assumeRoleArn"
                   value={options.jsonData.assumeRoleArn || ''}
                   onChange={onUpdateDatasourceJsonDataOption(this.props, 'assumeRoleArn')}
                 />
@@ -197,6 +200,7 @@ export default class ConnectionConfig extends PureComponent<Props, State> {
                   <Input
                     className="width-30"
                     placeholder="External ID"
+                    name="externalId"
                     value={options.jsonData.externalId || ''}
                     onChange={onUpdateDatasourceJsonDataOption(this.props, 'externalId')}
                   />
